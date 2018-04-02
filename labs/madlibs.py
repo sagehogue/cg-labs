@@ -1,0 +1,15 @@
+#madlibsv1.py
+print("Welcome to the metal press release mad libs game!!\n ")
+i_nationality = input("Choose a nationality: ")
+i_genre = input("Give me a music genre: ")
+i_noun = input("Give me a noun: ")
+i_band_name = input("Give me a totally radical band name: ")
+i_date = input("Give me a date: ")
+i_album_number = input("What album number is being announced? i.e. 3rd, 99th: ")
+i_album_title = input("Give me a sweet album title: ")
+i_label = input("Give me a tricked out brand name: ")
+i_format = input("Give me a music format type i.e. cd, record, cassette: ")
+i_producer = input("Give me a person's name: ")
+i_studio = input("Give me a studio name: ")
+
+print(i_nationality + " " + i_genre + " " + i_noun + ", " + i_band_name + ", have announced a " + i_date + " release of their highly-anticipated " + i_album_number + " album, " + i_album_title + ", which will come out via " + i_label + " on " + i_format + ".")
