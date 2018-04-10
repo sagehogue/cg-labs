@@ -4,23 +4,29 @@ from user import User
 from enemy import Enemy
 
 
-def checktile(i, j):  # Checks for content in tile
-    return bool(board[i][j])
+def checktile(i, j, user=None):  # Checks for content in tile
+    bad_sym_list = ['⍉', '§', '⌘']
+    print(bool(board[i][j]))
+    if user is True:
+        return bool(board[i][j] in "⍉§⌘" and [i] not in user.loci and [j] not in user.locj)
+    else:
+        return bool(board[i][j] in "⍉§⌘")
 
 
-def placeobj(obj, i=0, j=0):  # places a single instance of object or symbol
+def placeobj(obj, user=None, i=0, j=0):  # places a single instance of object or symbol
     if i == 0 and j == 0:
-        while True:
+        placing = True
+        while placing is True:
             gen_i = random.randint(0, height - 1)
             gen_j = random.randint(0, width - 1)
-            if checktile(gen_i, gen_j) is False:
+            if checktile(gen_i, gen_j, user) is False:
                 board[gen_i][gen_j] = obj
-                break
+                placing = False
+
     else:
         gen_i = i
         gen_j = j
         board[gen_i][gen_j] = obj
-
 
 
 width = 25  # the width of the board - rep by j
@@ -45,11 +51,11 @@ for wall in range(0, height-1):
 
 # define the player position
 # add 4 enemies in random locations
-snakeman_list = []
-for count in range(4):
-    snakeman = Enemy('Snake Man', '§', 5, 2)
-    snakeman_list.append(snakeman)
-    placeobj(snakeman_list[-1])
+snakeman_names = ['Arturo', 'Craig', 'Donovan', 'Lindsey', ]
+for name in range(len(snakeman_names)):
+    snakeman_names[name] = Enemy(snakeman_names[name], '§', 5, 2)
+for snakeman in snakeman_names:
+    placeobj(snakeman)
 
 
 placeobj('⌘', 12, 12)
@@ -81,7 +87,7 @@ while True:
         else:
             print('you hestitated and were slain')
             break
-    print("\n" * 50)
+    print("\n" * 20)
     print(user.loci, user.locj)
 # define player visibility for fog of war
     visible_height = range(user.loci - 4, user.loci + 4)

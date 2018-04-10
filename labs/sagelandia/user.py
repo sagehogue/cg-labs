@@ -14,21 +14,21 @@ class User:
         if self.checklocation(direction) is True:
             if direction in 'w':
                 self.loci -= 1  # move up
-                print(self.loci, self.locj)
+                # print(self.loci, self.locj)
             elif direction in 's':
                 self.loci += 1  # move down
-                print(self.loci, self.locj)
+                # print(self.loci, self.locj)
             elif direction in 'a':  # move left
                 self.locj -= 1
-                print(self.loci, self.locj)
+                # print(self.loci, self.locj)
             elif direction in 'd':  # move right
                 self.locj += 1
-                print(self.loci, self.locj)
+                # print(self.loci, self.locj)
         elif self.checklocation(direction) is False:
             print("You can't go that way!")
 
     def checklocation(self, direction):
-        if direction in 'w': # Gotta make sure a and d max/min params set correctly
+        if direction in 'w':  # Gotta make sure a and d max/min params set correctly
             if self.loci - 1 <= self.min:
                 return False
             else:
@@ -61,9 +61,10 @@ class User:
 
     def to_valhalla(self, cod):
         wod_list = [
-            'eviscerated', 'brought into the cold embrace of death', 'totally destroyed', 'utterly crushed', 'disgustingly annihilated', 'made into shreds', 'pulped',
-            'creamed', 'defenestrated', 'decapitated', 'lethally abused', 'gutrocked', 'taken to the farm', 'flushed down the toilet',
-            'brought upstate', 'lugied out', 'put in the ground', 'turned into gorenamentation'
+            'eviscerated', 'brought into the cold embrace of death', 'totally destroyed', 'utterly crushed',
+            'disgustingly annihilated', 'made into shreds', 'pulped', 'creamed', 'defenestrated', 'decapitated',
+            'lethally abused', 'gutrocked', 'taken to the farm', 'flushed down the toilet', 'brought upstate',
+            'lugied out', 'put in the ground', 'turned into gorenamentation'
         ]
         if cod is None:
             print('{} feels the cold embrace of death'.format(self.name))
@@ -71,8 +72,3 @@ class User:
         else:
             print('{} was {} by {}'.format(self.name, choice(wod_list), cod))
             exit()
-
-
-if __name__ == '__main__':
-    username = input('What is your character\'s name?: \n')
-    user = User(username)

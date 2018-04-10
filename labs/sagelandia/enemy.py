@@ -48,3 +48,8 @@ class Enemy:
         ]
         print('{} was {} by {}'.format(self.name, choice(wod_list), cod))
 
+    def __str__(self):
+        return self.board_symbol
+
+    def __repr__(self):
+        return self.__str__()
