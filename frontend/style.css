@@ -1,0 +1,244 @@
+#mainPage {
+  background: #EB4511;
+  box-sizing: border-box;
+  margin: 0; }
+
+body.mainPage main.wrapper {
+  display: grid;
+  grid-template-rows: 15% 80% 5%;
+  grid-template-columns: 25% 75%;
+  grid-auto-flow: row;
+  grid-column-gap: 4px;
+  grid-row-gap: 6px; }
+
+body.mainPage a {
+  background: inherit;
+  color: #000; }
+
+body.mainPage li a {
+  display: block;
+  background: inherit;
+  text-align: center; }
+  body.mainPage li a:active {
+    background-color: darkgrey;
+    color: white; }
+  body.mainPage li a:hover {
+    background-color: darkgrey;
+    color: white; }
+  body.mainPage li a img:hover {
+    background-color: darkgrey; }
+body.mainPage li ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+body.mainPage header.hheader {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-rows: 80% 20%;
+  background: #140F2D;
+  margin: 0 0 10px 0; }
+  body.mainPage header.hheader div.divWelcome {
+    grid-row: 1 / 2;
+    background: #E0FBFC;
+    background-image: url("banner.png");
+    margin: 0; }
+    body.mainPage header.hheader div.divWelcome h1 {
+      background: inherit;
+      margin: 0; }
+  body.mainPage header.hheader nav {
+    grid-row: 2 / 3;
+    background: #B02E0C;
+    border-radius: inherit;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 0; }
+    body.mainPage header.hheader nav ul {
+      background: inherit;
+      display: flex;
+      justify-content: space-around;
+      align-content: center;
+      flex-direction: row;
+      margin: 0; }
+      body.mainPage header.hheader nav ul li {
+        background: inherit;
+        border-left: 1px solid;
+        margin: 0; }
+        body.mainPage header.hheader nav ul li a {
+          display: block;
+          padding: 10px;
+          text-align: center;
+          margin: 0; }
+
+body.mainPage img.banner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: center;
+  font-size: .5em;
+  margin-top: 0; }
+
+body.mainPage .splashImages {
+  border-radius: 0;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2; }
+
+body.mainPage .splashImages > :first-child {
+  max-width: 98%;
+  height: auto; }
+
+ul.navLinks > * {
+  display: inline; }
+
+ul.bottomLinks {
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  align-items: flex-end;
+  margin: 0;
+  padding: 0; }
+  ul.bottomLinks li {
+    padding-top: 5px;
+    padding-bottom: 2px;
+    margin: inherit; }
+    ul.bottomLinks li a {
+      margin: inherit; }
+      ul.bottomLinks li a:hover {
+        background: inherit; }
+      ul.bottomLinks li a img {
+        max-width: 20%;
+        height: auto;
+        margin: inherit; }
+
+div.textHeader {
+  margin: 0;
+  padding: 0; }
+
+.aboutMe {
+  background: #B02E0C;
+  margin: 0; }
+  .aboutMe div {
+    background-color: #fff; }
+    .aboutMe div h2 {
+      text-align: center;
+      background: inherit;
+      font-size: 2.5em;
+      background-color: #EB4511;
+      margin-top: 0;
+      font-family: serif, sans-serif;
+      border-radius: 0%;
+      border: solid thin #000; }
+  .aboutMe h4 {
+    text-align: center;
+    font-size: 1.35em; }
+  .aboutMe p:first-of-type {
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    background: #E59F71;
+    border-radius: 0 0 35% 35%; }
+  .aboutMe p:nth-last-of-type(2) {
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+    background: #E59F71; }
+  .aboutMe p:last-of-type {
+    text-align: center;
+    margin: 20px;
+    padding: 25px 10px 10px 10px;
+    background: #E59F71;
+    border-radius: 30% 30% 0 0;
+    overflow: hidden;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent; }
+
+div.aboutMe > * {
+  background: inherit; }
+
+body.mainPage div.footer {
+  box-sizing: border-box;
+  display: inline-block;
+  grid-column: 1 / 3;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-height: 90%;
+  overflow: hidden; }
+  body.mainPage div.footer h3 {
+    text-align: center;
+    margin-top: .25em;
+    margin-bottom: .25em; }
+
+body.mainPage div.footer, div.footer > * {
+  background: #B02E0C;
+  overflow: hidden;
+  padding: 0;
+  margin: 0; }
+
+body.mainPage .bottomNav {
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%; }
+
+body.splashPage {
+  margin: 0; }
+  body.splashPage * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw; }
+  body.splashPage .wrapper {
+    display: grid;
+    grid-template-rows: 1fr 9fr; }
+    body.splashPage .wrapper header {
+      grid-row: 1 / 2;
+      background: #000;
+      max-height: 30vh;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; }
+      body.splashPage .wrapper header h1 {
+        justify-content: center;
+        align-items: flex-start; }
+        body.splashPage .wrapper header h1 img {
+          max-height: 20vh; }
+  body.splashPage div.splashImage {
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+    overflow: hidden;
+    background-image: url("splashbnwv1.jpg");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%; }
+    body.splashPage div.splashImage div.button {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      padding-left: 2px;
+      padding-right: 2px;
+      grid-row: 1/2;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      max-height: 10vh;
+      background: none; }
+      body.splashPage div.splashImage div.button a:link {
+        text-decoration: none;
+        background: none; }
+      body.splashPage div.splashImage div.button a {
+        color: lightgray;
+        background: inherit;
+        font-size: 1em;
+        font-family: Coronetscript, cursive;
+        font-style: italic; }
+    body.splashPage div.splashImage .img {
+      min-height: 100%;
+      min-width: 100%;
+      height: auto;
+      background: none; }
+
+/*# sourceMappingURL=style.css.map */

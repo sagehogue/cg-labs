@@ -1,0 +1,64 @@
+@import "vars";
+
+@mixin border($radius, $color, $size) {
+  $radius: 20px;
+  //!default;
+  border-radius: $radius;
+  //!default;
+  border: solid $size $color;
+  //!default;
+}
+
+@mixin my-func() {
+  @while ($my-num < 0) {
+    ul:nth-child(#{$my-num}) {
+      color: lighten($main-color, $my-num *2);
+    }
+    $my-num: $my-num - 1;
+  }
+
+%header-styles {
+  background: blue;
+  color: darkgrey;
+  border-radius: 20px;
+}
+
+header {
+  background-color: $main-color;
+  h1 {
+    color: blue;
+  }
+}
+
+h1 {
+  color: green;
+  background: darkgray;
+  border-radius: 20px;
+}
+
+h2 {
+  //@extend h1;
+  @extend %header-styles;
+  box-shadow: deeppink 2px 2px 2px 2px;
+  position: fixed;
+  left: 5vw / 96vw * 3vw;
+  background: transparentize($main-color, 0.5);
+  color: mix($main-color, #333);
+  &:hover {
+    //color: lighten($main-color, 50%);
+    color: darken($main-color, 20%)
+  }
+}
+
+.footer {
+  background-color: brown;
+}
+
+&:hover {
+  background-color: deeppink;
+}
+
+font: {
+  family: "Apple Braille";
+  size: 20em;
+  weight: bold;
