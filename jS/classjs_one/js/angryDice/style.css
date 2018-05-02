@@ -13,12 +13,14 @@ html {
       width: inherit;
       display: grid;
       grid-template-rows: 10% 40% 50%;
-      background-color: lightslategray; }
+      background: lightslategray url("angry_logo.svg");
+      background-size: 21%; }
       * body .wrapper header {
         grid-row: 1 / 2;
         display: flex;
         background-color: coral;
-        justify-content: center; }
+        justify-content: center;
+        border-bottom: lightcoral thick outset; }
         * body .wrapper header .headerContent {
           display: flex;
           flex-flow: row;
@@ -39,16 +41,18 @@ html {
       * body .wrapper .ruleSet {
         grid-row: 2 / 3;
         width: 100%;
-        background-color: inherit;
+        background-color: transparent;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column; }
         * body .wrapper .ruleSet .instructContainer {
           border: lightcoral thick outset;
-          padding: 5px;
+          background-color: lightslategrey;
+          padding: 5px 20px;
           display: flex;
           justify-content: center;
+          align-items: center;
           flex-flow: wrap column; }
           * body .wrapper .ruleSet .instructContainer h2, * body .wrapper .ruleSet .instructContainer h3 {
             text-align: center; }
@@ -59,8 +63,7 @@ html {
             width: 100%;
             height: auto;
             overflow: hidden;
-            margin: 5px;
-            justify-self: center; }
+            margin: 5px; }
           * body .wrapper .ruleSet .instructContainer .theObjectives {
             background-color: #666666;
             width: 100%;
@@ -68,9 +71,67 @@ html {
             overflow: hidden;
             margin: 5px; }
       * body .wrapper .gameWrapper {
+        display: grid;
         grid-row: 3 / 4;
-        display: block;
+        grid-template-rows: 35% 50% 15%;
+        grid-template-columns: 20% 60% 20%;
         background: inherit;
-        border: lightcoral thick outset; }
+        overflow: hidden; }
+        * body .wrapper .gameWrapper #displayBoard {
+          grid-row: 1 / 2;
+          grid-column: 2 / 3;
+          overflow: inherit;
+          height: auto;
+          display: flex;
+          background-color: palevioletred;
+          justify-content: space-around;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          border-top: lightcoral thick outset;
+          border-left: lightcoral thick outset;
+          border-right: lightcoral thick outset; }
+          * body .wrapper .gameWrapper #displayBoard h3 {
+            font-size: 2em;
+            background-color: transparent;
+            width: 30%;
+            height: 60%;
+            text-align: center; }
+          * body .wrapper .gameWrapper #displayBoard p {
+            font-size: 1.3em; }
+        * body .wrapper .gameWrapper #diceWrapper {
+          grid-row: 2 / 3;
+          grid-column: 2 / 3;
+          display: flex;
+          justify-content: space-around;
+          border-left: lightcoral thick outset;
+          border-right: lightcoral thick outset;
+          background: lightslategrey; }
+          * body .wrapper .gameWrapper #diceWrapper div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px; }
+            * body .wrapper .gameWrapper #diceWrapper div img {
+              padding: 15px;
+              background-color: mintcream;
+              border: indianred thick inset; }
+        * body .wrapper .gameWrapper #buttonWrapper {
+          grid-row: 3 / 4;
+          grid-column: 2 / 3;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          border-left: lightcoral thick outset;
+          border-right: lightcoral thick outset;
+          border-bottom: lightcoral thick outset; }
+          * body .wrapper .gameWrapper #buttonWrapper div {
+            width: 100%;
+            height: 100%; }
+            * body .wrapper .gameWrapper #buttonWrapper div button {
+              border: lightcoral thick groove;
+              width: inherit;
+              height: inherit; }
 
 /*# sourceMappingURL=style.css.map */
