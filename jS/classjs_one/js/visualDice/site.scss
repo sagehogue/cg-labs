@@ -1,26 +1,34 @@
 title {
-  display: none; }
+  display: none;
+}
 
+// Do some animation on woaAAaah
 * {
   box-sizing: border-box;
-  display: grid; }
-  * body {
+  display: grid;
+
+  body {
     margin: 0;
     z-index: -1;
-    background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet); }
+    background: linear-gradient(to right, orange, yellow, green, cyan, blue, violet);
+  }
+}
 
 main {
-  grid-template-areas: "f f . ." "d d d d" "d d d d" "s s s s"; }
+  grid-template-areas: "f f . ." "d d d d" "d d d d" "s s s s";
+}
 
 div {
-  width: 100vw; }
+  width: 100vw;
+}
 
 #rollArea {
   display: flex;
   grid-area: f;
   flex-direction: row;
-  flex-wrap: wrap; }
-  #rollArea h1 {
+  flex-wrap: wrap;
+  //border: green medium solid;
+  h1 {
     font-family: cursive;
     padding: 20px 35px 20px 35px;
     border: lightblue medium solid;
@@ -32,26 +40,35 @@ div {
     border-bottom-right-radius: 80%;
     background-image: url("bg.jpg");
     background-repeat: no-repeat;
-    background-size: cover; }
+    background-size: cover;
+  }
+  input {
+    //flex-grow: 2;x
+  }
+}
 
 #diceArena {
   grid-area: d;
   max-width: 100vw;
   max-height: 50vw;
   border: black solid medium;
-  min-height: 25vh; }
-  #diceArena ul {
+  min-height: 25vh;
+  ul {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
     max-width: inherit;
     max-height: 20vh;
-    overflow: auto; }
-    #diceArena ul li {
-      display: inline; }
-      #diceArena ul li img {
+    overflow: auto;
+    li {
+      display: inline;
+      img {
         max-width: 100px;
-        max-height: 100px; }
+        max-height: 100px;
+      }
+    }
+  }
+}
 
 #sumLand {
   grid-area: s;
@@ -62,11 +79,15 @@ div {
   line-height: 60px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap; }
-  #sumLand p {
+  flex-wrap: wrap;
+  p {
     justify-self: center;
-    display: inline; }
-  #sumLand span {
-    align-items: center; }
+    display: inline;
+  }
+  span {
+    align-items: center;
+  }
+}
 
-/*# sourceMappingURL=site.css.map */
+
+

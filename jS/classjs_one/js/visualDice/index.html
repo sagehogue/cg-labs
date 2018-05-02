@@ -8,10 +8,27 @@
 <body>
 <main>
     <div id="rollArea">
+        <h1>visualDice woaAAah</h1>
         <label for="userInput"></label><input type="text" id="userInput"><button type="button" id="rollButton">Roll Dice</button>
     </div>
-    <div id="diceArena"><ul id="diceArea"></ul></div>
+    <div id="diceArena">
+        <ul id="diceArea"></ul>
+    </div>
+    <div id="sumLand">
+        <p>Sum of dice: </p><span id="diceSum"></span>
+    </div>
 </main>
-<script src="site.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
+
+<!--Save your solution in a directory in practice/ named visual-dice.-->
+<!--Your HTML file should be named index.html, your CSS file named site.css, and your JS file named site.js in that directory.-->
+<!--Give the user a number input box with a button “roll”.-->
+<!--When they click that button, make that many 6-sided dice appear on the screen.-->
+<!--The dice should appear visually as dice, although for testing you can just start with numbers.-->
+<!--Come up with any reasonable way to display the visual dice.-->
+<!--If they re-click the roll button, erase the dice and roll new ones.-->
+<!--At the bottom of the screen, show the sum of all the dice currently out.-->
+<!--If the user clicks any of the dice, it re-rolls just that one.*-->

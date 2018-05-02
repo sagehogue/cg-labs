@@ -1,0 +1,93 @@
+//Fix the centering on the instruction box. The centering is all sorts of fucked and the right side is ugly.
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  body {
+    height: inherit;
+    width: inherit;
+    .wrapper {
+      height: inherit;
+      width: inherit;
+      display: grid;
+      grid-template-rows: 10% 40% 50%;
+      background-color: lightslategray;
+      header {
+        grid-row: 1 / 2;
+        display: flex;
+        background-color: coral;
+        justify-content: center;
+        .headerContent {
+          display: flex;
+          flex-flow: row;
+          overflow: hidden;
+          border: #B02E0C thick outset;
+          background: mintcream;
+          min-width: 300px;
+          max-width: 400px;
+          justify-content: space-between;
+          h1 {
+            font-family: Oldtown, fantasy;
+            height: inherit;
+            font-size: 2em;
+            align-self: center;
+
+          }
+          img {
+            max-height: 74px;
+            min-height: 30px;
+          }
+        }
+      }
+      .ruleSet {
+        grid-row: 2 / 3;
+        width: 100%;
+        background-color: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .instructContainer {
+          border: lightcoral thick outset;
+          padding: 5px;
+          display: flex;
+          justify-content: center;
+          flex-flow: wrap column;
+          h2, h3 {
+              text-align: center;
+            }
+          div {
+            overflow: hidden;
+          }
+          .theRules {
+            background-color: #666666;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            margin: 5px;
+            justify-self: center;
+
+          }
+          .theObjectives {
+            background-color: #666666;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            margin: 5px;
+          }
+        }
+      }
+      .gameWrapper {
+        grid-row: 3 / 4;
+        display: block;
+        background: inherit;
+        border: lightcoral thick outset;
+      }
+    }
+  }
+}

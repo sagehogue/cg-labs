@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box; }
+
+html, body {
+  width: 100vw;
+  height: 100vh; }
+
+body {
+  margin-top: 0; }
+
+#wrapper {
+  display: grid;
+  grid-template-areas: "h h h" "b b b" "b b b" ". f .";
+  background-color: lightblue;
+  padding-top: 5px;
+  max-height: 100vh;
+  min-height: 500px; }
+
+header {
+  grid-area: h;
+  background-color: mintcream;
+  padding: 40px 80px;
+  margin: 0 25px 60px 25px;
+  border-radius: 90%;
+  text-align: center;
+  overflow: hidden; }
+
+h1, h3 {
+  background-color: inherit;
+  margin: 0; }
+
+p {
+  background-color: inherit;
+  overflow: inherit; }
+
+#jokeBox {
+  grid-area: b;
+  display: flex;
+  background-color: mistyrose; }
+
+#buttonSpot {
+  grid-area: f;
+  display: flex;
+  justify-self: center; }
+  #buttonSpot #new {
+    background-color: mediumpurple;
+    border-radius: 10%;
+    border-style: dashed;
+    border-width: medium;
+    word-wrap: break-spaces;
+    font-size: .75em;
+    width: 250px;
+    height: 100px;
+    padding: 10px;
+    align-self: center;
+    justify-content: center; }
+
+/*# sourceMappingURL=style.css.map */

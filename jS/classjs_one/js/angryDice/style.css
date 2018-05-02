@@ -1,0 +1,76 @@
+html {
+  height: 100vh;
+  width: 100vw; }
+
+* {
+  box-sizing: border-box;
+  margin: 0; }
+  * body {
+    height: inherit;
+    width: inherit; }
+    * body .wrapper {
+      height: inherit;
+      width: inherit;
+      display: grid;
+      grid-template-rows: 10% 40% 50%;
+      background-color: lightslategray; }
+      * body .wrapper header {
+        grid-row: 1 / 2;
+        display: flex;
+        background-color: coral;
+        justify-content: center; }
+        * body .wrapper header .headerContent {
+          display: flex;
+          flex-flow: row;
+          overflow: hidden;
+          border: #B02E0C thick outset;
+          background: mintcream;
+          min-width: 300px;
+          max-width: 400px;
+          justify-content: space-between; }
+          * body .wrapper header .headerContent h1 {
+            font-family: Oldtown, fantasy;
+            height: inherit;
+            font-size: 2em;
+            align-self: center; }
+          * body .wrapper header .headerContent img {
+            max-height: 74px;
+            min-height: 30px; }
+      * body .wrapper .ruleSet {
+        grid-row: 2 / 3;
+        width: 100%;
+        background-color: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        * body .wrapper .ruleSet .instructContainer {
+          border: lightcoral thick outset;
+          padding: 5px;
+          display: flex;
+          justify-content: center;
+          flex-flow: wrap column; }
+          * body .wrapper .ruleSet .instructContainer h2, * body .wrapper .ruleSet .instructContainer h3 {
+            text-align: center; }
+          * body .wrapper .ruleSet .instructContainer div {
+            overflow: hidden; }
+          * body .wrapper .ruleSet .instructContainer .theRules {
+            background-color: #666666;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            margin: 5px;
+            justify-self: center; }
+          * body .wrapper .ruleSet .instructContainer .theObjectives {
+            background-color: #666666;
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            margin: 5px; }
+      * body .wrapper .gameWrapper {
+        grid-row: 3 / 4;
+        display: block;
+        background: inherit;
+        border: lightcoral thick outset; }
+
+/*# sourceMappingURL=style.css.map */

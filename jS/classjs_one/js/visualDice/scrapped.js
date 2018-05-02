@@ -1,16 +1,20 @@
 function newDice(id, integer, sides=6) {
     this.sides = sides;
     this.value = integer;
-    this.changeValue =
+    this.changeValue = rollSingle(this.id);
     this.id = id;
+    this.face =
     document.querySelector('#diceArea').innerHTML += (determineImage(integer, id));
 }
 
+//use setAttribute to change id and display - may be easier than doing some other weird shit.
+//I think I should do these in the proper order - I am getting too frustrated doing this one and I am not behaving well.
+
 function rollDice() {
-    document.querySelector('#diceArea').innerHTML = "";
+
     let rollNumber = document.querySelector('#userInput').value;
     let toRoll = parseInt(rollNumber);
-    let idArray = [0];
+let idArray = [0];
     for (let i=0; i < toRoll; i++) {
         let newID = (idArray[idArray.length - 1] + 1);
         idArray.push(newID);
@@ -20,16 +24,20 @@ function rollDice() {
     }
 }
 
-function rollSingle() {
+function rollSingle(id=null) {
     event.target.innerHTML = "";
     console.log(event.target.id);
     let int = Math.floor(Math.random() * 6) + 1;
-    document.querySelector('#diceArea').innerHTML += (determineImage(int));
+    if (id = null) {
+        document.querySelector('#diceArea').innerHTML += (determineImage(int));
+    } else {
+        document.querySelector(`#${id}`).innerHTML = (determineImage(int));
+    }
 }
 function determineImage(face, ID) {
     switch(face) {
         case 1:
-            return `<li id="${ID}"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Dice-1.svg/768px-Dice-1.svg.png" alt="Value 1"></li>`;
+            return `<li id="${ID}"><img src="" alt="Value 1"></li>`;
         case 2:
             return `<li id="${ID}"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Dice-2.svg/836px-Dice-2.svg.png" alt="Value 2"></li>`;
         case 3:
@@ -44,5 +52,5 @@ function determineImage(face, ID) {
 }
 
 
-document.querySelector('#rollButton').addEventListener('click', rollDice);
+document.querySelector.addEventListener('click', rollDice);
 document.querySelector('#diceArea').addEventListener(('click', rollSingle));
